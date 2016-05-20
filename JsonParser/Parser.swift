@@ -10,6 +10,11 @@ import UIKit
 import AFNetworking
 import OLGhostAlertView
 
+enum JSONError: String, ErrorType {
+    case NoData = "ERROR: no data"
+    case ConversionFailed = "ERROR: conversion from JSON failed"
+}
+
 class Parser: NSObject {
 
     // Response Handler Declared
@@ -33,6 +38,7 @@ class Parser: NSObject {
         self.startFetching_withURL(urlString)
     }
 
+    // MARK: Parse Using AFNetworking
     func startFetching_withURL(urlString: String) {
 
         client = AFHTTPSessionManager(sessionConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration())
@@ -53,7 +59,8 @@ class Parser: NSObject {
             }
 
             }, failure: { (task: NSURLSessionDataTask?, err: NSError) in
-            print(err)
+            print(err.localizedDescription)
+            self.showMessage("Failed", yourMessage: err.localizedDescription, time: 3.0)
         })
 
     }

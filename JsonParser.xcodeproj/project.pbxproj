@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059296801CEF0F3F00EEC4A3 /* HTTPHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPHeaders.h; sourceTree = "<group>"; };
 		05AD9B831CEEE7E6006C53B2 /* JsonParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05AD9B861CEEE7E6006C53B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05AD9B881CEEE7E6006C53B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 				05AD9B861CEEE7E6006C53B2 /* AppDelegate.swift */,
 				05AD9B881CEEE7E6006C53B2 /* ViewController.swift */,
 				05AD9B981CEEE87E006C53B2 /* Parser.swift */,
+				059296801CEF0F3F00EEC4A3 /* HTTPHeaders.h */,
 				05AD9B8A1CEEE7E6006C53B2 /* Main.storyboard */,
 				05D8D69B1CEEFB180065B88F /* Back.png */,
 				05AD9B8D1CEEE7E6006C53B2 /* Assets.xcassets */,
