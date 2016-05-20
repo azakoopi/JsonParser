@@ -10,7 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet var textter: UITextView!
+
     override func viewDidLoad() {
+
+        // Getting your URL request here
+        let parser3: Parser = Parser.sharedParser()
+        parser3.getDataFrom_URL("https://api.github.com/users/mralexgray/repos", completion: { (response: AnyObject?, error: NSError?) -> Void in
+            if (response != nil) { // If response is valid, do whatever yoiu want to do 🤓
+
+                self.textter.text = "\(response)"
+            }
+            else { // If response is valid, do whatever yoiu want to do 😮
+
+                self.textter.text = "Invalid Json Response"
+            }
+            self.myActivityIndicator.stopAnimating()
+
+        })
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -20,6 +39,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: Unhide the Status Bar
+    override func prefersStatusBarHidden() -> Bool {
+        return false
+    }
 
 }
 

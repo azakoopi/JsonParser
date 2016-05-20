@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JsonParser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYJ-3j-cbY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0149348452" green="0.011103201280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uzG-sK-NqY">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="0.0149348452" green="0.011103201280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mYJ-3j-cbY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3gP-9U-nYX"/>
+                            <constraint firstItem="mYJ-3j-cbY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AFz-Un-GL8"/>
+                            <constraint firstAttribute="bottom" secondItem="mYJ-3j-cbY" secondAttribute="bottom" id="EFg-Gc-biv"/>
+                            <constraint firstItem="mYJ-3j-cbY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vai-fh-fGE"/>
+                            <constraint firstItem="mYJ-3j-cbY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WbA-Lu-KiD"/>
+                            <constraint firstItem="uzG-sK-NqY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fkY-xh-i6w"/>
+                            <constraint firstAttribute="trailing" secondItem="mYJ-3j-cbY" secondAttribute="trailing" id="uym-ws-mHI"/>
+                            <constraint firstItem="uzG-sK-NqY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yQb-Y3-MOQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="uzG-sK-NqY" id="xjD-PP-Owh"/>
+                        <outlet property="textter" destination="mYJ-3j-cbY" id="Rvw-Tu-8kL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="187"/>
         </scene>
     </scenes>
 </document>
